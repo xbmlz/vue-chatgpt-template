@@ -1,0 +1,67 @@
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.conversation-bg {
+  background: var(--c-conversation)
+}
+
+.conversation-list {
+  background: var(--c-conversation-list)
+}
+
+
+:root {
+  --c-scroll: #d9d9d9;
+  --c-scroll-hover: #bbbbbb;
+  --c-shadow: #00000008;
+  --c-conversation: radial-gradient(circle at 14% 85%, #e7ecf7 0, rgba(231, 236, 247, 0) 37%),
+  radial-gradient(circle at 3.4% 3.7%, rgba(245, 237, 241, .5) 0, rgba(245, 237, 241, 0) 28%),
+  radial-gradient(circle at 100% 18%, #e8ebea 0, hsla(160, 7%, 92%, 0) 30%),
+  linear-gradient(180deg, #f5f4f6, #e6ebf7);
+
+  --c-conversation-list: radial-gradient(circle at 100% 0,#efe8eb 0,rgba(239,232,235,0) 33%),
+  radial-gradient(circle at 100% 25%,#e8ebea 0,hsla(160,7%,92%,0) 39%),
+  radial-gradient(circle at 100% 36%,hsla(160,7%,92%,.6) 0,hsla(160,7%,92%,0) 38%),
+  linear-gradient(180deg,#efeaef,#dcdcf5 99%);
+}
+
+html.dark {
+  --c-scroll: #333333;
+  --c-scroll-hover: #555555;
+  --c-shadow: #ffffff08;
+  --c-conversation: radial-gradient(circle at 14% 85%, #303033 0, rgba(46, 46, 48, 0) 37%),
+  radial-gradient(circle at 3.4% 3.7%, rgba(36, 36, 38, .5) 0, rgba(36, 36, 38, 0) 28%),
+  radial-gradient(circle at 100% 18%, #2f2f30 0, hsla(160, 7%, 20%, 0) 30%),
+  linear-gradient(180deg, #2e2e30, #252525);
+
+  --c-conversation-list: radial-gradient(circle at 100% 0, #17171a 0, rgba(23, 23, 26, 0) 33%),
+  radial-gradient(circle at 100% 25%, #18181a 0, hsla(160, 7%, 10%, 0) 39%),
+  radial-gradient(circle at 100% 36%, hsla(160, 7%, 10%, .6) 0, hsla(160, 7%, 10%, 0) 38%),
+  linear-gradient(180deg, #17171a, #0e0e10 99%);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--c-scroll);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--c-scroll-hover);
+}
+
+::selection {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.dark ::selection {
+  background: rgba(255, 255, 255, 0.12);
+}
